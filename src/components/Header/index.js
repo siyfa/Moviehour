@@ -16,6 +16,7 @@ const Header = () => {
   const menuBar = () => {
     menu === true ? setMenu(false) : setMenu(true);
   };
+
   return (
     <Wrapper>
       <Content>
@@ -42,7 +43,7 @@ const Header = () => {
           </div>
         </div>
         <Menu src={MenuBar} alt="menu-bar" onClick={menuBar} />
-        {menu && <MenuItems />}
+        {menu && <MenuItems menuBar={menuBar} />}
       </Content>
     </Wrapper>
   );
